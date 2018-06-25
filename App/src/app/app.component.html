@@ -20,8 +20,23 @@
 
     <h3> Event bindings() </h3>
 
+    <button
+      class="btn btn-block btn-info"
+      (click)="aumentarWidth($event)">
+      Aumentar imagen
+    </button>
+
+    <h1
+      (mouseenter)="restarWidth()"> Restar imagen
+    </h1>
+
 
     <h3> NgModel (two way data bindings) [()] </h3>
+
+    <label for="width">Width</label>
+
+    <input id="width" type="text"
+           [(ngModel)]="imagenWidth">
 
 
   </div>

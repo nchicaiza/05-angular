@@ -26,6 +26,15 @@ export class AppComponent {
   <img src="${this.imagenUrl}" alt="">
 `;
 
+  aumentarWidth(evento) {
+    console.log('evento', evento);
+    this.imagenWidth += 10;
+  }
+
+  restarWidth() {
+    this.imagenWidth -= 10;
+  }
+
 
 }
 
