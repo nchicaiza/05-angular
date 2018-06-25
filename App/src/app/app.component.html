@@ -4,12 +4,36 @@
     <br>
     <br>
     <br>
-    <h1 class="text-center">Hola {{titulo}}</h1>
+    <h1 class="text-center">
+      Hola
+
+      <span *ngIf="mostrarTitulo">{{titulo}}</span>
+
+    </h1>
 
     <p>Soy el usuario
       {{usuario.nombre + ' ' + usuario.apellido }}
       {{1 + 10}}
     </p>
+
+    <ul>
+      <li>{{arregloNumeros[0]}}</li>
+      <li>{{arregloNumeros[1]}}</li>
+      <li>{{arregloNumeros[2]}}</li>
+      <li>{{arregloNumeros[3]}}</li>
+      <li>{{arregloNumeros[4]}}</li>
+    </ul>
+
+    <ul>
+      <li
+        *ngFor="let numero of arregloNumeros;
+        let i = index"
+      >
+        {{i + 1}} .- Valor del numero: {{numero}}
+
+      </li>
+    </ul>
+
 
   </div>
   <div class="col-sm-4"></div>
