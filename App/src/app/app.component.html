@@ -1,4 +1,32 @@
 <div class="row">
+  <div class="col-sm-12">
+    <h1>Bindings</h1>
+
+    <h3> Property bindings[] </h3>
+
+    <img [src]="imagenUrl"
+         [alt]="'Imagen de un chico'"
+         [width]="imagenWidth"
+    >
+
+    <p [style.color]="'red'"
+       [style.background-color]="'black'"
+       [innerText]="'Hola amigos'">
+
+    </p>
+
+    <div [innerHTML]="html"></div>
+
+
+    <h3> Event bindings() </h3>
+
+
+    <h3> NgModel (two way data bindings) [()] </h3>
+
+
+  </div>
+
+
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
     <br>
