@@ -17,7 +17,7 @@ export class AppComponent {
   arregloNumeros = [5, 4, 3, 2, 1];
   mostrarTitulo = true;
 
-  imagenUrl = "https://coryrylan.com/assets/images/cory-rylan-gde.png";
+  imagenUrl = "https://www.blaugranas.com/media/galeria/25/0/5/0/9/n_f_c_barcelona_varios-3219050.jpg";
   imagenWidth = 200;
 
   html = `
