@@ -1,4 +1,4 @@
-import {Routes} from "@angular/router";
+import {Routes} from '@angular/router';
 import {HomeComponent} from "./rutas/home/home.component";
 import {FaqComponent} from "./rutas/faq/faq.component";
 import {NoEncontradoComponent} from "./rutas/no-encontrado/no-encontrado.component";

@@ -1,0 +1,102 @@
+
+<form
+#formularioRegistro="ngForm"
+(ngSubmit)="ingresarUsuario(formularioRegistro)"
+>
+  <h4>Estados Formulario</h4>
+  <pre>
+    valid:{{formularioRegistro.valid}}
+    invalid:{{formularioRegistro.invalid}}
+    pristine:{{formularioRegistro.pristine}}
+    dirty:{{formularioRegistro.dirty}}
+    touched:{{formularioRegistro.touched}}
+    untouched:{{formularioRegistro.untouched}}
+  </pre>
+
+  <h4>Errores Formularios</h4>
+
+  <pre>{{formularioRegistro.errors | json}}</pre>
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+
+    <input type="email"
+           class="form-control"
+           id="exampleInputEmail1"
+           aria-describedby="emailHelp"
+           placeholder="Enter email"
+           [(ngModel)]="email"
+           name="email"
+           required
+           #emailInput="ngModel"
+           pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+           minlength="6"
+    >
+
+    <div
+      class="alert alert-primary"
+      role="alert"
+      *ngIf="emailInput.dirty && emailInput.errors"
+    >
+      <p *ngIf="emailInput.errors.required">
+        Campo requerido
+      </p>
+
+      <p *ngIf="emailInput.errors.pattern">
+        Debe de ser un correo valido
+      </p>
+      <p *ngIf="emailInput.errors.minlength">
+        Debe tener minimo de 6 caracteres
+      </p>
+
+    </div>
+
+    <h5>Estados del Campo</h5>
+    <pre>
+      valid:{{formularioRegistro.valid}}
+      invalid:{{formularioRegistro.invalid}}
+      pristine:{{formularioRegistro.pristine}}
+      dirty:{{formularioRegistro.dirty}}
+      touched:{{formularioRegistro.touched}}
+      untouched:{{formularioRegistro.untouched}}
+    </pre>
+
+    <h5>Errores del campo</h5>
+    <pre>
+       Errores:{{emailInput.errors | json}}
+
+    </pre>
+
+
+    <small id="emailHelp" class="form-text text-muted">
+      We'll never share your email with anyone else.
+    </small>
+  </div>
+  <div class="form-group">
+    <label
+      for="exampleInputPassword1">Password
+    </label>
+
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password">
+  </div>
+
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">
+      Check me out
+    </label>
+  </div>
+
+
+  <button
+    [disabled]=""
+    type="submit" class="btn btn-primary">Submit</button>
+</form>
